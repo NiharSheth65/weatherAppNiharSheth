@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+    <div class="inputs container white">
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Enter Your City Name..." autocomplete="off">
+            <button type="submit" class="submit">GO</button>
+        </form>
+    </div>
+    <div class="trans-container big-container">
+        <div class="location-container container">
+            <h2 class="location-header">
+                <span class="city-header"><h3><%= cityName %> <%= comma %> <%= countryName %> </h3></span>
+            </h2>
+        </div>
+        <div class="date-conatainer container">
+            <h3 class="date-header">
+                <span class="day"><%= day %></span>
+                <span class="month"><%= month %></span>,
+                <span class="year"><%= year %></span>
+            </h3>
+        </div>
+        <div class="temp-container container">
+            <h1 class="temp-header">
+                <span class="temp-num"><%= temperature %> </span>
+                <span class="temp-unit"><%= unit %></span>
+            </h1>
+        </div>
+        <div class="feels-like-container container">
+            <h4 class="feels-like-header">
+                <%= feelsLike %>
+                <span class="feels-like-num"><%= feelsTemperature %></span>
+                <span class="feels-like-unit"><%= unit %></span>
+            </h4>
+        </div>
+        <div class="condition-container container">
+            <h5 class="condition-header"><em><%= description %></em></h5>
+            <img src="<%= imgSrc %>" class="icon-img">
+        </div>
+        <button class="change-unit">Faranheit</button>
+    </div>
+
+    <script src="script.js"></script>
+    <%- include('partials/footer') %>
